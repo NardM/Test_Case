@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div id="column-1">
+        <p>Введите математическое выражение</p>
+            <input [(ngModel)]="eval_text" placeholder="formula">
+        <button class="btn btn-default" (click)="addSolve(eval_text)">Вычислить</button>
+        <h1>Ответ: {{solve}}</h1>`
+    </div>
+    <div id="column-2">
+            <div class="panel">
+                  <p><input class="form-control" [(ngModel)]="text" placeholder = "Название" />
+                  <p></p><input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена" />
+                  <p><button class="btn btn-default" (click)="addItem(text, price)">Добавить</button>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                            <th>Предмет</th>
+                            <th>Цена</th>
+                        </tr>
+                </thead>
+                    <tbody>
+                    <tr *ngFor="let item of items">
+                            <td>{{item.purchase}}</td>
+                            <td>{{item.price}}</td>
+                        </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    <div id="column-3">
+        <div id="square">
+            <div style="position: absolute; right: 0; bottom: 0">
+                {{name}}
+            </div>
+        </div>
+        <label>Введите текст:</label>
+        <input [(ngModel)]="text    " placeholder="text">
+    </div>
+</div>
